@@ -1,0 +1,82 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+__pycache__
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# =========================
+# uv / Poetry
+# =========================
+.uv/
+poetry.lock
+
+# =========================
+# FastAPI / Uvicorn
+# =========================
+*.log
+logs/
+*.pid
+
+# =========================
+# Environment variables
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# OS
+# =========================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# =========================
+# IDEs & Editors
+# =========================
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# =========================
+# Jupyter / Notebooks
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# Testing / Coverage
+# =========================
+.coverage
+htmlcov/
+.pytest_cache/
+
+# =========================
+# Build / Distribution
+# =========================
+build/
+dist/
+
+# =========================
+# Docker
+# =========================
+*.tar
+
+# =========================
+# Personal Data
+# =========================
+data/

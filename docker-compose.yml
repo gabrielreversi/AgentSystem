@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: agents_postgres
+    environment:
+      POSTGRES_DB: agents_db
+      POSTGRES_USER: agent
+      POSTGRES_PASSWORD: agent123
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
