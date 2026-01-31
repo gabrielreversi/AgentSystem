@@ -24,6 +24,7 @@ async def question(payload: QuestionRequest):
         "question": payload.question,
         "sql_query": None,
         "sql_result": None,
+        "answer": None,
         "error": None,
     }
 
@@ -38,4 +39,5 @@ async def question(payload: QuestionRequest):
         "question": payload.question,
         "sql_query": result["sql_query"],
         "sql_result": result["sql_result"],
+        "answer": result["answer"],
     }

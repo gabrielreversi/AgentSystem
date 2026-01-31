@@ -3,12 +3,16 @@ from langchain_openai import AzureChatOpenAI
 
 from src.agents.state import AgentSQLstate
 from src.agents.sql_agent import SQLAgentNode
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 llm = AzureChatOpenAI(
-    azure_endpoint="<>",
-    api_key="<>",
-    azure_deployment="<>",
-    api_version="<>",
+    azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
+    api_key=os.getenv("AZURE_OPENAI_API_KEY"),
+    azure_deployment=os.getenv("AZURE_OPENAI_DEPLOYMENT"),
+    api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
     temperature=0.2,
     max_tokens=500,
     seed=123
