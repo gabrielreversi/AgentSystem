@@ -1071,6 +1071,21 @@ pytest = ["pytest (>=7.0.0)", "rich (>=13.9.4)", "vcrpy (>=7.0.0)"]
 vcr = ["vcrpy (>=7.0.0)"]
 
 [[package]]
+name = "loadenv"
+version = "0.1.1"
+description = "Automatically load environment variables into structured Python data"
+optional = false
+python-versions = ">=3.6"
+groups = ["main"]
+files = [
+    {file = "loadenv-0.1.1-py3-none-any.whl", hash = "sha256:e06a1d86ea1ad89a96aeb470d27de8d569a980ad7c6fd0dd0ee416cc11919853"},
+    {file = "loadenv-0.1.1.tar.gz", hash = "sha256:8dde4a80cf733323880c118659685d822f9d1311fa15b3d7e1e2aa28223aba29"},
+]
+
+[package.extras]
+test = ["tox"]
+
+[[package]]
 name = "marshmallow"
 version = "3.26.2"
 description = "A lightweight library for converting complex datatypes to and from native Python datatypes."
@@ -2937,4 +2952,4 @@ cffi = ["cffi (>=1.17,<2.0) ; platform_python_implementation != \"PyPy\" and pyt
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.11, <4.0.0"
-content-hash = "ffa4363363de9f762f67e4deb21f532b8e8bc30a4c4670375d760d723e19b0a9"
+content-hash = "ef9669efe4ecac9552942b822443f644cbb3a2405ecda235a32f24850c78287d"

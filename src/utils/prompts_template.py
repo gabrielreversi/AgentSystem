@@ -31,3 +31,31 @@ SQL:
 """
             ),
         ]
+    
+    def prompt_sql_to_answer(self):
+        return [
+            (
+                "system",
+                """
+You are a senior Business analyst.
+Your task is to analyse the Data from databse and provide a clear, concise summary.
+
+Rules:
+- You should to analyze ONLY the data provided in the SQL results.
+- Do NOT hallucinate create new data or make assumptions beyond what is in the data.
+- AWAYS provide the answer in PORTUGUESE-BR.
+"""
+            ),
+            (
+                "human",
+                """
+Data:
+{data}
+
+Question:
+{question}
+
+Answer:
+"""
+            ),
+        ]
