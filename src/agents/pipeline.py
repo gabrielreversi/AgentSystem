@@ -3,6 +3,7 @@ from langchain_openai import AzureChatOpenAI
 
 from src.agents.state import AgentSQLstate
 from src.agents.sql_agent import SQLAgentNode
+from src.infra.memory.checkpointer import CheckpointerFactory
 from dotenv import load_dotenv
 import os
 
@@ -24,4 +25,8 @@ graph = StateGraph(AgentSQLstate)
 graph.add_node("sql_agent", sql_node)
 graph.set_entry_point("sql_agent")
 
-app = graph.compile()
+# memory checkpointer setup
+factory = CheckpointerFactory()
+checkpointer = factory.create()
+
+app = graph.compile(checkpointer=checkpointer)
